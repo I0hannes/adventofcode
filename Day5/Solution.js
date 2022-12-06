@@ -574,6 +574,7 @@ for(var i = 0; i < dimensionMatrix; i++){
 }
 
 console.log("Matrix", Matrix)
+var tempMatrix = Matrix
  // #endregion
 
 
@@ -601,11 +602,30 @@ console.log("Matrix", Matrix)
 
  // #region Second Part
  var secondPart = () => {
+    Matrix = tempMatrix
+    Movements.forEach((x) => {
+        console.log(x)
+        howMany = x.howMany
+        let from = x.from-1
+        let to = x.to -1
 
+        var elements = Matrix[from].slice(Matrix[from].length - howMany, Matrix[from].length)
+        for (let index = 0; index < howMany; index++) {
+            Matrix[from].pop()
+        }
+        // console.log("element",elements)
+        // console.log("to",Matrix[to])
+        elements.forEach(x => Matrix[to].push(x))
+
+    })
+
+    var result = []
+    Matrix.forEach(x => result.push(x.pop().value.replace('[','').replace(']','')))
+    console.log(result.join())
 }
  // #endregion
 
  // #region Resolution
- // firstPart()
+ firstPart()
  secondPart()
  // #endregion
