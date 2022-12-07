@@ -620,6 +620,7 @@ var tempMatrix = Matrix
     })
 
     var result = []
+    // TODO: check here it's interrupting here now... but it worked for the test before
     Matrix.forEach(x => result.push(x.pop().value.replace('[','').replace(']','')))
     console.log(result.join())
 }
