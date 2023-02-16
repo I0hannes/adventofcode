@@ -29,4 +29,6 @@ var max3 = Math.max(...goblins);
 var finalResult = max + max2 + max3;
 
 console.log("max", max, "max2", max2, "max3", max3)
-console.log("finale", finalResult)
+console.log("finale", finalResult) 
+// ! This is the solution of the second part
+// TODO the missing part one.
