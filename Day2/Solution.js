@@ -166,3 +166,6 @@ matrix.forEach((ele) => {
 });
 
 console.log(list.reduce((acc, curr) => acc + curr, 0));
+
+
+// TODO Rearrange it.
