@@ -1,4 +1,4 @@
-readTextFile("inputTest.txt")
+readTextFile("input.txt")
 
 // #region First Part
 var rows = input.split("\n")
@@ -34,7 +34,7 @@ for (var i in rows) {
 console.log(result.reduce((value, curr) => value + curr))
 // #endregion
 
-readTextFile("inputTest.txt")
+readTextFile("input.txt")
 
 // #region Second Part
 // PARTE 2
