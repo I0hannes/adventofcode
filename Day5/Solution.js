@@ -115,4 +115,4 @@ var secondPart = () => {
 // #region Resolution
 firstPart()
 secondPart()
- // #endregion
+// #endregion
