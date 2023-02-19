@@ -58,7 +58,7 @@ for (var key in moves) {
 }
 
 // console.log("Matrix", Matrix)
-var tempMatrix = Matrix
+var tempMatrix = JSON.parse(JSON.stringify(Matrix))
 // #endregion
 
 // #region First Part
@@ -85,7 +85,9 @@ var firstPart = () => {
 
 // #region Second Part
 var secondPart = () => {
+    // console.log(Matrix, tempMatrix)
     Matrix = tempMatrix
+
     Movements.forEach((x) => {
         // console.log(x)
         howMany = x.howMany
@@ -104,7 +106,9 @@ var secondPart = () => {
 
     var result = []
     // TODO: check here it's interrupting here now... but it worked for the test and for the second  part...
-    Matrix.forEach(x => result.push(x.pop().value.replace('[', '').replace(']', '')))
+    Matrix.forEach(x => {
+        result.push(x.pop().value.replace('[', '').replace(']', ''))
+    })
     console.log("Second Part: ", result.join(""))
 }
 // #endregion
